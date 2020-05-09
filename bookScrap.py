@@ -23,7 +23,7 @@ with webdriver.Firefox() as driver:
 	assert driver.title == "All products | Books to Scrape - Sandbox", "Titulo Diferente" # ve se o titulo do site é o correto, caso contrario
 	# o programa para
 	driver.implicitly_wait(5) # webdriver espera 5 segundos para a pagina carregar
-	tags = driver.find_elements(By.CSS_SELECTOR, "li > a") # seleciona todas as categorias, por meio das tags <a> com pais <li>
+	tags = driver.find_elements(By.CSS_SELECTOR, "li > a") # seleciona todos os generos, por meio das tags <a> com pais <li>, localizado na parte esquerda do site
 	tags = tags[2:-2] # duas primeiras categorias (books e home, que contem as tags li e a) e a ultima, que dependendo da pagina pode conter no
 	# final um botão com next para ser selecionado
 	genero_link = [] # lista com os links para serem acessados
@@ -60,4 +60,4 @@ with webdriver.Firefox() as driver:
 			except exc.NoSuchElementException: # caso não tenha um botão de proximo, o loop é parado e o algoritmo livros na proxima pagina
 			# de genero
 				break
-	wb.save('Livros.xlsx') # salva os dados no arquivo de excel "Selenium Livros"
+	wb.save('Livros.xlsx') # salva os dados no arquivo de excel "Livros"
