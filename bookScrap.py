@@ -1,5 +1,5 @@
 # Esse algoritmo coleta dados do site http://books.toscrape.com/ e cria uma planilha no excel com o nome, preço, nota,
-# disponibilidade e genero.
+# disponibilidade e genero. Feito utilizando as bibliotecas selenium e openpyxl.
 
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
