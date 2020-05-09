@@ -60,4 +60,4 @@ with webdriver.Firefox() as driver:
 			except exc.NoSuchElementException: # caso não tenha um botão de proximo, o loop é parado e o algoritmo livros na proxima pagina
 			# de genero
 				break
-	wb.save('Selenium Livros.xlsx') # salva os dados no arquivo de excel "Selenium Livros"
+	wb.save('Livros.xlsx') # salva os dados no arquivo de excel "Selenium Livros"
